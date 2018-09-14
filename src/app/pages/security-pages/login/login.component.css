@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500i');
+
+body {
+  background: url(../../../../assets/Images/background5.jpg) no-repeat center center fixed !important;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 150px;
+  margin-right: -70px;
+  background-size: cover !important;
+}
+
+
+.main-section{
+  margin: 210px 78px 0;
+  padding: 0;
+}
+
+.modal-content{
+  background-color: #434e5a;
+  opacity: .8;
+  padding: 0 18px;
+  border-radius: 10px;
+}
+
+.user-img{
+  margin-top: -60px;
+  margin-bottom: 45px;
+}
+
+.form-group{
+  margin-bottom: 25px;
+}
+
+.form-group input{
+  height: 42px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding-left: 54px;
+}
+
+.form-group{
+  font-family: "Font Awesome\ 5 Free";
+  content: "\f1fa";
+  font-size: 22px;
+  padding-top: 4px;
+  color: #555e60;
+}
+
+.form-control {
+  font-family: Montserrat, sans-serif;
+  font-size: medium;
+}
+.form-group:last-of-type::before{
+  content: "\f023";
+}
+
+.btn-success{
+  font-family: Montserrat, sans-serif;
+  font-size: medium;
+  margin-top: 50px;
+}
+
+.forgot{
+  font-family: Montserrat, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.alert .alert-danger{
+  font-family: Montserrat, sans-serif;
+  z-index: 500 !important;
+  right: 15px !important;
+  margin: 0 !important;
+  margin-bottom: 5px !important;
+  max-width: 92% !important;
+  position: absolute !important;
+  padding: 13px !important;
+  line-height: 1.2 !important;
+  background: transparent !important;
+  border: none !important;
+  color: red !important;
+  box-shadow: none !important;
+}
+
+a{
+  color: #FDFFFC;
+}

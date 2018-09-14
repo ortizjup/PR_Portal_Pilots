@@ -1,0 +1,43 @@
+<div class="modal-dialog text-center">
+  <div class="col-sm-9 main-section">
+    <div class="modal-content">
+      <div class="col-12 user-img">
+        <img src="../assets/Images/logo1.png">
+      </div>
+      <div class="col-12 form-input">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm.valid)" >
+          <div class="form-group">
+            <input type="email" id="name" name="name" #name="ngModel"
+                   class="form-control" placeholder="Ingrese Email"
+                   [(ngModel)]="userModel.userName" required>
+          </div>
+          <small [hidden]="name.valid || (name.pristine && !loginForm.submitted)"
+                 class="alert alert-danger">
+            Nombre de usuario requerido!
+          </small>
+
+          <div class="col-12 form-input">
+            <input id="password" name="password" #password="ngModel" type="password"
+                   class="form-control" placeholder="Ingrese Contraseña"
+                   [(ngModel)]="userModel.password" required>
+          </div>
+          <small [hidden]="password.valid || (password.pristine && !loginForm.submitted)"
+                 class="alert alert-danger">
+            Contraseña requerida!
+          </small>
+          <button type="submit" class="btn btn-success">Login</button>
+        </form>
+      </div>
+      <div class="col-12 forgot">
+        <a routerLink="/forgotPassword">Olvide mi contraseña</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

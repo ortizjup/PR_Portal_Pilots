@@ -1,0 +1,27 @@
+<div>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Apellido</th>
+    <th scope="col">Dni</th>
+    <th scope="col">Ultimo Sorteo</th>
+    <th scope="col">Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pilot of pilotList" #pilot>
+    <th scope="row">{{pilot.id}}</th>
+    <td>{{pilot.nombre}}</td>
+    <td>{{pilot.apellido}}</td>
+    <td>{{pilot.dni}}</td>
+    <td>{{pilot.ultimoSorteo}}</td>
+    <td>
+      <i class="fa fa-trash" (click)="deletePilot(pilot)"></i>
+      <i class="fa fa-pencil" (click)="editoPilotInfo(pilot)"></i>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>

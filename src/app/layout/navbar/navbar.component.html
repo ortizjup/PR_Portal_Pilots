@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse" style="opacity: .8; background-color: #434e5a" *ngIf="isIn">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Portal Pilotos</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Reportes</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a (click)="toggleState()"><span class="glyphicon glyphicon-log-in"></span>Cerrar Sesion</a></li>
+    </ul>
+  </div>
+</nav>

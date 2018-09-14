@@ -1,0 +1,22 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {HomepageComponent} from "./homepage/homepage.component";
+import {LayoutModule} from "../../layout/layout.module";
+import {PpolotsPagesRoutingModule} from "./ppolots-pages-routing.module";
+import { PilotsListComponent } from './pilots-list/pilots-list.component';
+import { PilotModalComponent } from './pilots-list/pilot-modal/pilot-modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
+
+@NgModule({
+  imports: [
+    CommonModule,
+    LayoutModule,
+    PpolotsPagesRoutingModule,
+    ModalModule.forRoot(),
+  ],
+  declarations: [HomepageComponent, PilotsListComponent, PilotModalComponent],
+  entryComponents: [PilotModalComponent],
+  exports: [HomepageComponent]
+})
+export class PpilotsPagesModule { }
