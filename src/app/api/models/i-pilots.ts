@@ -5,4 +5,7 @@ export interface IPilots extends BaseEntity{
   apellido: string;
   dni: number;
   ultimoSorteo: Date;
+  fechaAlta: Date;
+  fechaModificacion: Date;
+  participaDealSorteo: boolean;
 }

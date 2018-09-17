@@ -6,6 +6,7 @@ import {FormsModule} from "@angular/forms";
 import {LayoutModule} from "./layout/layout.module";
 import {PagesModule} from "./pages/pages.module";
 import {RouterModule, Routes} from "@angular/router";
+import {UiSwitchModule} from "angular2-ui-switch";
 
 const routes: Routes = [
   {path: '**', component: LoginComponent}

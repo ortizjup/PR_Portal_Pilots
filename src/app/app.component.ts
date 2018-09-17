@@ -9,5 +9,6 @@ import { setTheme } from 'ngx-bootstrap/utils';
 export class AppComponent {
   title = 'PR-Pilots-Portal';
   constructor(){
+    setTheme('bs3');
   }
 }

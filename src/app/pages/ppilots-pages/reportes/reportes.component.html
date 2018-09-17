@@ -1,0 +1,23 @@
+<div class="tablecontainer">
+  <table class="table table-hover">
+    <thead class="headerblack">
+    <tr>
+      <th>#</th>
+      <th>Fecha Sorteo</th>
+      <th>Ganadores</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody class="tablebody">
+    <tr *ngFor="let pilot of pilotList">
+      <th>{{pilot.id}}</th>
+      <td>{{pilot.nombre}}, {{pilot.apellido}}</td>
+      <td *ngIf="pilot.fechaModificacion == null">....</td>
+      <td>
+        <button class="btn btn-link" title="Eliminar" (click)="eliminarSorteo(pilot)"><i class="fa fa-trash" id="delete"></i></button>
+        <button class="btn btn-link" title="Editar" (click)="imprimirReportes(pilot)"><i class="fa fa-pencil" id="edit"></i></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

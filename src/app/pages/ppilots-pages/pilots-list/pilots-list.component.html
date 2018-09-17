@@ -1,27 +1,51 @@
-<div>
-<table class="table">
-  <thead class="thead-dark">
+<div class="tablecontainer">
+  <button class="btn btn-default pull-right" (click)="altaPiloto()">Alta Piloto</button>
+<table class="table table-hover">
+  <thead class="headerblack">
   <tr>
-    <th scope="col">#</th>
-    <th scope="col">Nombre</th>
-    <th scope="col">Apellido</th>
-    <th scope="col">Dni</th>
-    <th scope="col">Ultimo Sorteo</th>
-    <th scope="col">Acciones</th>
+    <th>#</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Dni</th>
+    <th>Ultimo Sorteo</th>
+    <th>Fecha Alta</th>
+    <th>Ultima Modificacion</th>
+    <th>Acciones</th>
+    <th>Participan del sorteo</th>
   </tr>
   </thead>
-  <tbody>
-  <tr *ngFor="let pilot of pilotList" #pilot>
-    <th scope="row">{{pilot.id}}</th>
+  <tbody class="tablebody">
+  <tr *ngFor="let pilot of pilotList">
+    <th>{{pilot.id}}</th>
     <td>{{pilot.nombre}}</td>
     <td>{{pilot.apellido}}</td>
     <td>{{pilot.dni}}</td>
-    <td>{{pilot.ultimoSorteo}}</td>
+    <td *ngIf="pilot.ultimoSorteo != null">{{pilot.ultimoSorteo?.toLocaleDateString()}}</td>
+    <td *ngIf="pilot.ultimoSorteo == null">....</td>
+    <td>{{pilot.fechaAlta.toLocaleDateString()}}</td>
+    <td *ngIf="pilot.fechaModificacion != null">{{pilot.fechaModificacion?.toLocaleDateString()}}</td>
+    <td *ngIf="pilot.fechaModificacion == null">....</td>
     <td>
-      <i class="fa fa-trash" (click)="deletePilot(pilot)"></i>
-      <i class="fa fa-pencil" (click)="editoPilotInfo(pilot)"></i>
+      <button class="btn btn-link" title="Eliminar" (click)="deletePilot(pilot)"><i class="fa fa-trash" id="delete"></i></button>
+      <button class="btn btn-link" title="Editar" (click)="editoPilotInfo(pilot)"><i class="fa fa-pencil" id="edit"></i></button>
+    </td>
+    <td>
+      <label class="custom-control custom-checkbox" (click)="changePatipaDeSoretos(pilot, participaDelSorteoCheckBox)">
+        <input type="checkbox" style="display: none" class="custom-control-input" #participaDelSorteoCheckBox>
+        <span class="custom-control-indicator"></span>
+      </label>
     </td>
   </tr>
   </tbody>
 </table>
+</div>
+
+<div class="modal fade" bsModal #popupPilotModal="bs-modal">
+  <div class="contentModalScroll">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <app-pilot-modal #popupPilotComponent (save)="save($event)" (cancel)="popupPilotModal.hide()"></app-pilot-modal>
+      </div>
+    </div>
+  </div>
 </div>

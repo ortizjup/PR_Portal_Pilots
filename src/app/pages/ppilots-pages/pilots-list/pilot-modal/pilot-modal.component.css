@@ -1,0 +1,61 @@
+.btn-default{
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  background-color: slategrey;
+  border-color: slategrey;
+}
+
+.modal-footer{
+  background-color: #434e5a;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+}
+
+.modal-body{
+  background-color: #434e5a;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+}
+
+.modal-header{
+  background-color: #434e5a;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  color: #FDFFFC;
+}
+
+.form-group{
+  margin-bottom: 25px;
+}
+
+.form-group input{
+  font-family: 'Roboto', sans-serif;
+  height: 42px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.form-group{
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  padding-top: 4px;
+  color: #555e60;
+}
+
+.alert .alert-danger{
+  font-family: Montserrat, sans-serif;
+  z-index: 500 !important;
+  right: 15px !important;
+  margin: 0 !important;
+  margin-bottom: 5px !important;
+  max-width: 92% !important;
+  position: absolute !important;
+  padding: 13px !important;
+  line-height: 1.2 !important;
+  background: transparent !important;
+  border: none !important;
+  color: red !important;
+  box-shadow: none !important;
+}
